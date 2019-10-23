@@ -7,6 +7,7 @@ public class AsteroidSpawner : MonoBehaviour
     public GameObject asteroidPrefab;
     private float startDelay = 0;
     private float spawnInterval = 5.0f;
+    private float r;
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +18,12 @@ public class AsteroidSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void SpawnAsteroid()
     {
-
-        Instantiate(asteroidPrefab, transform.position, Quaternion.Euler(0, 0, 0));
+        r = Random.Range(-60, 60);
+        Instantiate(asteroidPrefab, transform.position, Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z + r));
     }
 }
