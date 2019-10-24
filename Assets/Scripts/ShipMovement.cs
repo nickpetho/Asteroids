@@ -63,7 +63,6 @@ public class ShipMovement : MonoBehaviour
         GameObject g = col.gameObject;
         if (g.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
             isHit = true;
         }
     }

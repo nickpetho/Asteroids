@@ -23,12 +23,4 @@ public class BoltMovement : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        GameObject g = col.gameObject;
-        if (g.CompareTag("Enemy"))
-        {
-            Destroy(g);
-        }
-    }
 }

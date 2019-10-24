@@ -99,6 +99,8 @@ MonoBehaviour:
   maxTorque: 5
   minForce: 1
   maxForce: 2
+  explosionPrefab: {fileID: 2378888391079965338, guid: eb91d78d9bb080943a0179e99ce268ba,
+    type: 3}
 --- !u!61 &1011134985245248459
 BoxCollider2D:
   m_ObjectHideFlags: 0
