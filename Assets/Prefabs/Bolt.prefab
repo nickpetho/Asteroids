@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7860765319165111283}
   - component: {fileID: 2223220508765579251}
+  - component: {fileID: 6882897965276192028}
   - component: {fileID: 7598581535233440019}
   - component: {fileID: 1048828710127104021}
-  - component: {fileID: 6882897965276192028}
   m_Layer: 9
   m_Name: Bolt
   m_TagString: Blaster
@@ -83,6 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6882897965276192028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579232209571166310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0cc8b2a659e8a498d0d62555c8f0b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boltSpeed: 3
 --- !u!61 &7598581535233440019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130,16 +143,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6882897965276192028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579232209571166310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0cc8b2a659e8a498d0d62555c8f0b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boltSpeed: 3

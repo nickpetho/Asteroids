@@ -6,14 +6,12 @@ public class ShipMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     public float force = 5.0f;
-    public float torque = 1.0f;
+    public float torque = 5.0f;
     public float boltDistance = 0.5f;
     public bool isHit = false;
     public Sprite falcon;
     public Sprite falcon1;
     public GameObject projectilePrefab;
-    public Animator animator;
-    public GameObject explosionPrefab;
 
     // Start is called before the first frame update
     void Start()
