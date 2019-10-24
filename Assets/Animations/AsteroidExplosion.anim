@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Explosion
+  m_Name: AsteroidExplosion
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -51,10 +51,10 @@ AnimationClip:
       value: {fileID: 21300000, guid: c60f91f544b286a4cb356da264d62f9f, type: 3}
     - time: 1.25
       value: {fileID: 21300000, guid: 60f033e9944db4f46b7295765407fd7e, type: 3}
-    attribute: falcon
+    attribute: m_Sprite
     path: 
-    classID: 114
-    script: {fileID: 11500000, guid: de24768002bd0ea459ced830114bdd1e, type: 3}
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
@@ -64,10 +64,10 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
-      attribute: 3090355692
-      script: {fileID: 11500000, guid: de24768002bd0ea459ced830114bdd1e, type: 3}
-      typeID: 114
-      customType: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: eada21c6ae72e3944a367c40d8d75b0e, type: 3}
