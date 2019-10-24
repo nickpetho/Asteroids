@@ -10,7 +10,10 @@ public class BoltMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Gets the bolts rigidbody component
         rb = GetComponent<Rigidbody2D>();
+
+        //Adds force to the bolt multiplied by the boltSpeed
         rb.AddRelativeForce(Vector2.up * boltSpeed, ForceMode2D.Impulse);
     }
 
@@ -21,6 +24,7 @@ public class BoltMovement : MonoBehaviour
     }
     void OnBecameInvisible()
     {
+        //Destroys the bolt when it goes off screen
         Destroy(gameObject);
     }
 }

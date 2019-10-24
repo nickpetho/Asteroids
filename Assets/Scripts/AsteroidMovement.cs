@@ -16,9 +16,16 @@ public class AsteroidMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Gets the asteroids rigidbody component
         rb = GetComponent<Rigidbody2D>();
+
+        //Sets the torque to a random number between -5 and 5
         torque = Random.Range(minTorque, maxTorque);
+
+        //Sets the force to a random number between 1 and 2
         force = Random.Range(minForce, maxForce);
+
+        //Adds the torque and force to the asteroid
         rb.AddTorque(torque);
         rb.AddRelativeForce(new Vector2(0, force), ForceMode2D.Impulse);
     }
@@ -31,24 +38,39 @@ public class AsteroidMovement : MonoBehaviour
 
     void OnBecameInvisible()
     {
+        //Destroys the asteroid when it goes off screen
         Destroy(gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        //Checks to see if the asteroid collided with a blaster shot
         GameObject g = col.gameObject;
         if (g.CompareTag("Blaster"))
         {
+            //Destroys the blaster object
             GameObject.Destroy(g);
 
-            // Instantiate an explosion prefab in its place
+            // Instantiates an explosion prefab in the place of the asteroid
             GameObject exp = (GameObject)Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
-            // Make sure explosion destroyed quickly
+            // Makes sure explosion destroyed in 2 seconds
             GameObject.Destroy(exp, 2);
 
-            // Destroy self as well by destroying gameObject component of this object
+            // Destroys the gameObject component of this object
             Destroy(this.gameObject);
+        }
+
+        else if (g.CompareTag("Player"))
+        {
+            //Destroys the player object
+            GameObject.Destroy(g);
+
+            // Instantiates an explosion prefab in the place of the player
+            GameObject exp = (GameObject)Instantiate(explosionPrefab, g.transform.position, Quaternion.identity);
+
+            // Makes sure explosion destroyed in 2 seconds
+            GameObject.Destroy(exp, 2);
         }
     }
 }
